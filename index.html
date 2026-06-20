@@ -1,0 +1,180 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Community Food Promotion</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#fffaf4;
+color:#222;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+background:
+linear-gradient(rgba(255,130,40,.75),rgba(255,130,40,.75)),
+url("https://images.unsplash.com/photo-1547592180-85f173990554");
+background-size:cover;
+color:white;
+}
+
+.logo{
+width:110px;
+height:110px;
+margin:auto;
+border-radius:50%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:52px;
+}
+
+h1{
+margin-top:20px;
+font-size:42px;
+}
+
+.sub{
+font-size:18px;
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+.timer{
+font-size:38px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.card{
+background:white;
+max-width:900px;
+margin:-40px auto 40px;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top:25px;
+}
+
+.box{
+padding:18px;
+background:#fff5ea;
+border-radius:12px;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:18px 40px;
+background:#ff7a00;
+color:white;
+text-decoration:none;
+font-size:22px;
+border-radius:14px;
+}
+
+.small{
+margin-top:18px;
+font-size:13px;
+color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="logo">
+🍽️
+</div>
+
+<h1>Community Food Promotion</h1>
+
+<p class="sub">
+View the current promotion and review available details before participating.
+</p>
+
+<div class="timer" id="timer">
+01:59:59
+</div>
+
+</section>
+
+<div class="card">
+
+<h2>What’s Included</h2>
+
+<div class="features">
+
+<div class="box">
+🥗 Community support offers
+</div>
+
+<div class="box">
+📱 Mobile friendly access
+</div>
+
+<div class="box">
+⚡ Quick application process
+</div>
+
+</div>
+
+<a
+class="button"
+href="YOUR_AFFILIATE_LINK">
+View Offer
+</a>
+
+<div class="small">
+Promotional / affiliate link. Check all details and eligibility on the destination page.
+</div>
+
+</div>
+
+<script>
+
+let sec=7199;
+
+function run(){
+
+let h=Math.floor(sec/3600);
+let m=Math.floor((sec%3600)/60);
+let s=sec%60;
+
+document.getElementById("timer").innerHTML=
+String(h).padStart(2,"0")+":"+
+String(m).padStart(2,"0")+":"+
+String(s).padStart(2,"0");
+
+if(sec>0){
+sec--;
+}
+
+}
+
+setInterval(run,1000);
+
+</script>
+
+</body>
+</html>
+```
